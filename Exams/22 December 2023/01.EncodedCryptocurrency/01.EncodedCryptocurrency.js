@@ -9,7 +9,7 @@ function solve(input) {
 
         switch (command) {
           case "TakeEven":
-            message = message.split('').filter((_, index) => index % 2 === 0).map(m => m).join('');
+            message = message.split('').filter((_, index) => index % 2 === 0).join('');
             console.log(message);
             break;
                 
@@ -31,7 +31,7 @@ function solve(input) {
           case "Buy":
             console.log(`The cryptocurrency is: ${message}`);
             break;
-        }
+        }      
     }
 }
 
