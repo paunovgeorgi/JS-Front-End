@@ -3,7 +3,6 @@ function solve(input) {
 
     for (const line of input) {
 
-        let buy = false;
         const [command, ...tokens] = line.split('?');
         let subStr = tokens[0];
         let replacement = tokens[1];
@@ -30,15 +29,10 @@ function solve(input) {
             break;
                 
           case "Buy":
-            buy = true;
+            console.log(`The cryptocurrency is: ${message}`);
             break;
         }
-
-        if (buy) {
-            break;
-        } 
     }
-    console.log(`The cryptocurrency is: ${message}`);
 }
 
 
