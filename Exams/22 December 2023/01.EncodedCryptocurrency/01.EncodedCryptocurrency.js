@@ -1,5 +1,4 @@
 function solve(input) {
-
     let message = input.shift();
 
     for (const line of input) {
@@ -14,21 +13,22 @@ function solve(input) {
             message = message.split('').filter((_, index) => index % 2 === 0).map(m => m).join('');
             console.log(message);
             break;
+                
           case "ChangeAll":
             while (message.includes(subStr)) {
-                let temp = message.replace(subStr, replacement);
-                message = temp;
+                message = message.replace(subStr, replacement);
             }
             console.log(message);
             break;
+                
           case "Reverse":
             if (message.includes(subStr)) {
                 let reversed = subStr.split('').reverse().join('');
-                message = message.replace(subStr, '');
-                message += reversed;
+                message = message.replace(subStr, '') + reversed;
                 console.log(message);
             }else{console.log('error');}
             break;
+                
           case "Buy":
             buy = true;
             break;
@@ -36,8 +36,7 @@ function solve(input) {
 
         if (buy) {
             break;
-        }
-        
+        } 
     }
     console.log(`The cryptocurrency is: ${message}`);
 }
