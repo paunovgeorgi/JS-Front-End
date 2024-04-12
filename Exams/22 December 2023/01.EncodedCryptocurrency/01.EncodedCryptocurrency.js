@@ -3,9 +3,7 @@ function solve(input) {
 
     for (const line of input) {
 
-        const [command, ...tokens] = line.split('?');
-        let subStr = tokens[0];
-        let replacement = tokens[1];
+        const [command, subStr, replacement] = line.split('?');
 
         switch (command) {
           case "TakeEven":
